@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="./js/style.js" defer></script>
+	<script src="./js/smoothScroll.js" defer></script>
+	<script src="./js/tabs.js" defer></script>
 </head>
 
 <body>
@@ -107,7 +109,7 @@
 						<ul class="design-list">
 							<li>
 								<button type="button" class="design-list__item design-list__item_active"
-									data-tabs-handler="interior" data-some-attr="attr">Дизайн салона</button>
+									data-tabs-handler="interior">Дизайн салона</button>
 							</li>
 							<li>
 								<button type="button" class="design-list__item" data-tabs-handler="body">Дизайн
@@ -159,6 +161,7 @@
 						<img src="img/design/body04.jpg" alt="A 200" class="design__img">
 					</li>
 				</ul>
+				<a href="#feature" class="main__scroll" aria-label="к следующему экрану"></a>
 			</div>
 			<!-- /.design-wrapper -->
 		</div>
