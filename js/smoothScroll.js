@@ -2,8 +2,9 @@
 
 const linksHead = document.querySelectorAll('.menu-list__link');
 const mainScroll = document.querySelectorAll('.main__scroll');
-
 const newArray = [...linksHead, ...mainScroll]
+
+
 
 newArray.forEach(linkHead => {
   linkHead.addEventListener('click', (event) => {
@@ -11,10 +12,12 @@ newArray.forEach(linkHead => {
     const ID = event.target.getAttribute('href').slice(1);
 
     const elems = document.querySelector(`#${ID}`);
-    elems.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
+
+    seamless.scrollIntoView(elems, {
+      behavior: "smooth",
+      block: "start",
+      inline: "center",
+    });
 
   })
 })

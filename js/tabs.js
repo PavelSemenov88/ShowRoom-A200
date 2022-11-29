@@ -4,7 +4,7 @@ const tabsHandlerElems = document.querySelectorAll('[data-tabs-handler]');
 const tabsContentElems = document.querySelectorAll('[data-tabs-field]');
 const designTitle = document.querySelectorAll('.design__title');
 
-for(let btn of tabsHandlerElems) {
+tabsHandlerElems.forEach((btn, btnIdx) => {
   btn.addEventListener('click', () => {
     tabsHandlerElems.forEach((item) => item.classList.remove('design-list__item_active'));
     btn.classList.add('design-list__item_active');
@@ -17,6 +17,12 @@ for(let btn of tabsHandlerElems) {
       }
     })
 
-    designTitle.forEach(title => title.classList.toggle('hidden'))
+    designTitle.forEach((title, titleIdx) => {
+      if (titleIdx === btnIdx ) {
+        title.classList.remove('hidden')
+      } else {
+        title.classList.add('hidden')
+      }
+    })
   })
-}
+})
